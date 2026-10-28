@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <title>XUDBIN OYNA | Rebellious Window</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="app" id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">X<span>!</span></div>
+        <div>
+          <p class="eyebrow">NEON LAB / EXPERIMENT 002</p>
+          <h1>XUDBIN <span>OYNA</span></h1>
+        </div>
+      </div>
+      <div class="status">
+        <span class="status-dot"></span>
+        <span id="statusText">FAOL</span>
+      </div>
+    </header>
+
+    <section class="intro">
+      <div class="intro-symbol">😈</div>
+      <div>
+        <h2>MENI YOPA OLMAYSAN!</h2>
+        <p>Bu oyna o‘z qoidalari bilan yashaydi. X ni bossang, u qochadi!</p>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span>QOCHISHLAR</span>
+        <strong id="escapeCount">0</strong>
+      </div>
+      <div class="stat">
+        <span>OYNA NUSXALARI</span>
+        <strong id="cloneCount">1</strong>
+      </div>
+      <div class="stat">
+        <span>SENING OCHKOING</span>
+        <strong id="score">0</strong>
+      </div>
+    </section>
+
+    <section class="control-panel">
+      <div>
+        <p class="panel-title">BOSHQARUV</p>
+        <p class="panel-description">Oyna rejimini tanla</p>
+      </div>
+
+      <div class="mode-buttons">
+        <button class="mode-btn active" data-mode="jump" type="button">
+          ↗ Qochish
+        </button>
+        <button class="mode-btn" data-mode="clone" type="button">
+          ⊞ Ko‘payish
+        </button>
+        <button class="mode-btn" data-mode="both" type="button">
+          ⚡ Aralash
+        </button>
+      </div>
+
+      <div class="control-footer">
+        <span>MAXSUS YOPISH:</span>
+        <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Q</kbd>
+      </div>
+    </section>
+
+    <section class="desktop-section">
+      <div class="desktop-heading">
+        <span><i class="live-dot"></i> VIRTUAL ISH STOLI</span>
+        <span id="windowLabel">1 TA OYNA OCHIQ</span>
+      </div>
+
+      <div class="desktop" id="desktop">
+        <div class="desktop-grid"></div>
+
+        <div class="desktop-hud">
+          <span>NEON OS <b>v2.6</b></span>
+          <span id="clock">00:00:00</span>
+        </div>
+
+        <div class="window-layer" id="windowLayer">
+          <article class="fake-window main-window" data-window-id="1">
+            <div class="window-titlebar">
+              <div class="window-app-icon">X</div>
+              <span class="window-title">XudbinOyna.exe</span>
+              <div class="window-controls">
+                <button class="window-control minimize-btn" type="button"
+                  aria-label="Oynani kichraytirish" title="Kichraytirish">−</button>
+                <button class="window-control maximize-btn" type="button"
+                  aria-label="Oynani kattalashtirish" title="Kattalashtirish">□</button>
+                <button class="window-control close-btn" type="button"
+                  aria-label="Oynani yopishga urinish" title="Yopishga urinish">×</button>
+              </div>
+            </div>
+
+            <div class="window-content">
+              <div class="robot-face">ಠ‿ಠ</div>
+              <h3 id="windowHeadline">NIMA QILYAPSAN?!</h3>
+              <p id="windowMessage">Meni yopmoqchimisan? Avval meni tut! 😏</p>
+              <button class="challenge-btn" type="button">MENI YOP! ×</button>
+              <div class="window-bottom">
+                <span class="window-indicator"></span>
+                <span>YOPILISHGA QARSHILIK: FAOL</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="desktop-notification hidden" id="notification" role="status">
+          <span class="notification-icon">⚡</span>
+          <span id="notificationText">Meni yopa olmaysan!</span>
+        </div>
+
+        <div class="exit-overlay hidden" id="exitOverlay">
+          <div class="exit-card">
+            <div class="exit-symbol">✓</div>
+            <p class="eyebrow">NEON OS / YAKUN</p>
+            <h2>O‘YIN TUGADI</h2>
+            <p id="exitSummary">Sen xudbin oynani mag‘lub etding!</p>
+            <button id="restartBtn" class="restart-btn" type="button">
+              ↻ QAYTA BOSHLASH
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <p class="desktop-hint">
+        <span>✦</span> Oynadagi × tugmasini bosib ko‘r. U seni osonlikcha qo‘yib yubormaydi!
+      </p>
+    </section>
+
+    <section class="help-panel">
+      <div class="help-icon">⌨</div>
+      <div>
+        <h3>MAXFIY CHIQISH USULI</h3>
+        <p>Istalgan vaqtda <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Q</kbd> ni bos. O‘yin xavfsiz yakunlanadi.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-line"></div>
+      <p class="creator-label">LOYIHA MUALLIFI</p>
+      <h3>AKRAMJONOVA <span>JADRA MARATOVNA</span></h3>
+      <p class="footer-caption">BLACK × GOLD NEON EXPERIENCE</p>
+      <p class="footer-note">Bu brauzer ichidagi virtual oyna simulyatsiyasi.</p>
+    </footer>
+  </main>
+</body>
+</html>
